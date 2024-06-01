@@ -1,0 +1,222 @@
+[gd_scene load_steps=13 format=3 uid="uid://dws54ls3xkdmv"]
+
+[ext_resource type="Script" path="res://cs/Battlee2.cs" id="1_c8ebs"]
+[ext_resource type="Texture2D" uid="uid://cmdor45vwf5ld" path="res://images and assets/bg_final_qa.png" id="1_on8v3"]
+[ext_resource type="Theme" uid="uid://dtohx0ueb2kxp" path="res://materials/wordzardryTheme8.tres" id="2_rjj4q"]
+[ext_resource type="Texture2D" uid="uid://cveptwmkdrpjh" path="res://images and assets/Box2.png" id="3_v3tyv"]
+[ext_resource type="Texture2D" uid="uid://cy3tynuhe0u4a" path="res://images and assets/sprite2.png" id="4_amhd3"]
+[ext_resource type="Theme" uid="uid://peea3vj20vqd" path="res://materials/wordzardryTheme6.tres" id="5_r1gpb"]
+[ext_resource type="Theme" uid="uid://fvbxhiulsn7c" path="res://materials/wordzardryTheme5.tres" id="6_rspr5"]
+[ext_resource type="Texture2D" uid="uid://b82lib04hsoux" path="res://images and assets/Rectangle 12.png" id="7_aadri"]
+[ext_resource type="PackedScene" uid="uid://cv4kbvrx5lyw0" path="res://healthbar/Healthbar.tscn" id="8_phld8"]
+[ext_resource type="Texture2D" uid="uid://dq4nu4t6n0liq" path="res://images and assets/warrior_sprite_final2.png" id="9_aexh5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqjwl"]
+bg_color = Color(0.105882, 0, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw2qk"]
+bg_color = Color(0.568627, 0, 0.113725, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c8ebs")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -409.0
+offset_right = 8885.0
+offset_bottom = 5374.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.217)
+size_flags_horizontal = 0
+texture = ExtResource("1_on8v3")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 36.0
+offset_right = 146.0
+offset_bottom = 92.0
+theme = ExtResource("2_rjj4q")
+text = "BACK"
+
+[node name="Box2" type="Sprite2D" parent="."]
+position = Vector2(963.5, 947)
+scale = Vector2(1.84739, 0.412017)
+texture = ExtResource("3_v3tyv")
+
+[node name="BossSprite" type="Sprite2D" parent="."]
+position = Vector2(1515, 367)
+scale = Vector2(1.48, 1.562)
+texture = ExtResource("4_amhd3")
+flip_h = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 817.0
+offset_right = -21.0
+offset_bottom = -173.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.990279)
+theme = ExtResource("5_r1gpb")
+text = "\"How come?\" is a more informal way of saying"
+scroll_smooth = true
+
+[node name="Choices" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Choices"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 903.0
+offset_right = 509.0
+offset_bottom = 976.0
+theme = ExtResource("6_rspr5")
+text = "Which?"
+
+[node name="Button 2" type="Button" parent="Choices"]
+layout_mode = 0
+offset_left = 1263.0
+offset_top = 898.0
+offset_right = 1627.0
+offset_bottom = 971.0
+theme = ExtResource("6_rspr5")
+text = "What?"
+
+[node name="Button 3" type="Button" parent="Choices"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 996.0
+offset_right = 508.0
+offset_bottom = 1069.0
+theme = ExtResource("6_rspr5")
+text = "Why?"
+
+[node name="Button 4" type="Button" parent="Choices"]
+layout_mode = 0
+offset_left = 1267.0
+offset_top = 998.0
+offset_right = 1624.0
+offset_bottom = 1071.0
+theme = ExtResource("6_rspr5")
+text = "When?"
+
+[node name="Rectangle12" type="Sprite2D" parent="."]
+position = Vector2(881.063, 171.641)
+scale = Vector2(0.988224, 0.532085)
+texture = ExtResource("7_aadri")
+
+[node name="Rectangle13" type="Sprite2D" parent="."]
+position = Vector2(254, 274)
+scale = Vector2(0.51952, 0.317495)
+texture = ExtResource("7_aadri")
+
+[node name="Healthbar" parent="." instance=ExtResource("8_phld8")]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 115.0
+offset_right = 1178.0
+offset_bottom = 143.0
+
+[node name="Boss Health" type="Label" parent="Healthbar"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = -82.0
+offset_right = 484.0
+offset_bottom = 5.0
+theme_override_colors/font_color = Color(0.972549, 0.878431, 0.878431, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Boss Health"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Healthbar/Boss Health"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 72.0
+offset_right = 235.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 33
+text = "400/500"
+
+[node name="Boss Attack Meter" parent="." instance=ExtResource("8_phld8")]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 248.0
+offset_right = 1167.0
+offset_bottom = 276.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_oqjwl")
+value = 40.0
+
+[node name="Boss Attack Meter" type="Label" parent="Boss Attack Meter"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = -55.0
+offset_right = 422.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(0.972549, 0.878431, 0.878431, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Boss Attack Meter"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Boss Attack Meter/Boss Attack Meter"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 44.0
+offset_right = 171.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 33
+text = "71%"
+
+[node name="HunterSpriteFinal" type="Sprite2D" parent="."]
+position = Vector2(450, 556)
+texture = ExtResource("9_aexh5")
+
+[node name="Health" parent="." instance=ExtResource("8_phld8")]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 278.0
+offset_right = 383.0
+offset_bottom = 306.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_qw2qk")
+value = 40.0
+
+[node name="PHealth" type="Label" parent="Health"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -46.0
+offset_right = 181.0
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0.972549, 0.878431, 0.878431, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Health"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Health/PHealth"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 34.0
+offset_right = 124.0
+offset_bottom = 80.0
+scale = Vector2(0.643687, 1)
+theme_override_font_sizes/font_size = 33
+text = "40/100"

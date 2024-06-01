@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbve0puyddfi6"]
+
+[ext_resource type="Script" path="res://cs/MainMenu2.cs" id="1_vu7d8"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_7qlwa"]
+[ext_resource type="Texture2D" uid="uid://se8cec8qnf5l" path="res://images and assets/logo.png" id="2_i2ss4"]
+[ext_resource type="Texture2D" uid="uid://b5f8n030w0jiy" path="res://images and assets/Sword.png" id="3_pgmaw"]
+[ext_resource type="Theme" uid="uid://1cxg6cc3icg5" path="res://materials/jomol5.res" id="4_yxeye"]
+[ext_resource type="Texture2D" uid="uid://csfe1cv1772hv" path="res://images and assets/Quest Together.png" id="5_33aty"]
+[ext_resource type="Theme" uid="uid://dtohx0ueb2kxp" path="res://materials/wordzardryTheme8.tres" id="6_chbao"]
+
+[node name="Main Menu 2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vu7d8")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 8874.0
+offset_bottom = 3908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.216537)
+size_flags_horizontal = 0
+texture = ExtResource("2_7qlwa")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Quest Alone" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 617.0
+offset_right = 921.0
+offset_bottom = 905.0
+theme_override_font_sizes/font_size = 40
+alignment = 2
+clip_text = true
+
+[node name="Sword" type="Sprite2D" parent="Control/Quest Alone"]
+position = Vector2(218, 101)
+scale = Vector2(3.125, 2.70076)
+texture = ExtResource("3_pgmaw")
+
+[node name="Label" type="Label" parent="Control/Quest Alone"]
+layout_mode = 0
+offset_top = 188.0
+offset_right = 445.0
+offset_bottom = 267.0
+theme = ExtResource("4_yxeye")
+text = "Quest Alone"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Quest Together" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 1042.0
+offset_top = 618.0
+offset_right = 1488.0
+offset_bottom = 906.0
+theme_override_font_sizes/font_size = 40
+alignment = 2
+clip_text = true
+
+[node name="QuestTogether" type="Sprite2D" parent="Control/Quest Together"]
+position = Vector2(226.5, 95)
+scale = Vector2(1.05755, 1.08571)
+texture = ExtResource("5_33aty")
+
+[node name="Label2" type="Label" parent="Control/Quest Together"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 444.0
+offset_bottom = 282.0
+theme = ExtResource("4_yxeye")
+text = "Quest Together"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer2" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 40.0
+scale = Vector2(1.35587, 1.28989)
+
+[node name="Back" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 110.0
+offset_bottom = 61.0
+theme = ExtResource("6_chbao")
+text = "BACK"
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 378.0
+offset_right = 1831.0
+offset_bottom = 1378.0
+scale = Vector2(0.3, 0.295)
+texture = ExtResource("2_i2ss4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 491.0
+offset_top = 482.0
+offset_right = 1516.0
+offset_bottom = 578.0
+theme_override_colors/font_color = Color(0.392157, 0.239216, 0.580392, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.0117647, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_font_sizes/font_size = 70
+text = "CHOOSE A GAMEPLAY OPTION"
+horizontal_alignment = 1

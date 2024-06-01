@@ -1,0 +1,167 @@
+[gd_scene load_steps=7 format=3 uid="uid://2mygkqtan0ud"]
+
+[ext_resource type="Script" path="res://login.gd" id="1_1s0oq"]
+[ext_resource type="Texture2D" uid="uid://dm408m4hnats4" path="res://images and assets/Main_Frame.png" id="2_gqv5c"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="3_252q3"]
+[ext_resource type="Texture2D" uid="uid://bs5ilavkwv8qc" path="res://images and assets/logo4.png" id="4_vjapk"]
+[ext_resource type="Texture2D" uid="uid://ckeaaun4oki1v" path="res://images and assets/title2.png" id="5_bshxm"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="7_4gjat"]
+
+[node name="login" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1s0oq")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_252q3")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -241.0
+offset_right = 316.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gqv5c")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Frame"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 71.0
+offset_right = 604.0
+offset_bottom = 188.0
+color = Color(0.647059, 0.690196, 0.988235, 1)
+
+[node name="Logo4" type="Sprite2D" parent="Frame"]
+position = Vector2(313, 49)
+scale = Vector2(0.157, 0.1465)
+texture = ExtResource("4_vjapk")
+
+[node name="Title2" type="Sprite2D" parent="Frame"]
+position = Vector2(305, 122)
+texture = ExtResource("5_bshxm")
+
+[node name="loginButton" type="Button" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 242.0
+offset_top = 369.0
+offset_right = 395.0
+offset_bottom = 422.0
+theme = ExtResource("7_4gjat")
+text = "LOGIN"
+
+[node name="email" type="Label" parent="Frame"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 106.0
+offset_top = 227.0
+offset_right = 186.0
+offset_bottom = 254.0
+text = "Email"
+
+[node name="password" type="Label" parent="Frame"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 106.0
+offset_top = 278.0
+offset_right = 186.0
+offset_bottom = 305.0
+text = "Password"
+
+[node name="emailTxt" type="LineEdit" parent="Frame"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 207.0
+offset_top = 223.0
+offset_right = 510.0
+offset_bottom = 254.0
+theme = ExtResource("7_4gjat")
+
+[node name="passwordTxt" type="LineEdit" parent="Frame"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 207.0
+offset_top = 274.0
+offset_right = 510.0
+offset_bottom = 305.0
+theme = ExtResource("7_4gjat")
+secret = true
+
+[node name="dontHaveAnAccount" type="Label" parent="Frame"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 52.0
+offset_top = 454.0
+offset_right = 232.0
+offset_bottom = 481.0
+text = "Don't have an account?"
+
+[node name="RegisterClick" type="Button" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 242.0
+offset_top = 449.0
+offset_right = 313.0
+offset_bottom = 480.0
+scale = Vector2(1.04878, 0.997076)
+theme_type_variation = &"FlatButton"
+text = "Sign up!"
+
+[node name="forgotPassword" type="Button" parent="Frame"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 311.0
+offset_right = 507.0
+offset_bottom = 353.0
+theme_type_variation = &"FlatButton"
+text = "Forgot Password?"
+
+[node name="messageLabel" type="Label" parent="Frame"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 197.0
+offset_right = 247.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+
+[node name="quitButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme = ExtResource("7_4gjat")
+text = "QUIT"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Frame/loginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Frame/RegisterClick" to="." method="_on_register_click_pressed"]
+[connection signal="pressed" from="Frame/forgotPassword" to="." method="_on_forgot_password_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

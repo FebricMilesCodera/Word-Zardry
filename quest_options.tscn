@@ -1,0 +1,147 @@
+[gd_scene load_steps=10 format=3 uid="uid://doq1uvvil0yq5"]
+
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="1_5qpiq"]
+[ext_resource type="Script" path="res://quest_options.gd" id="1_ovi47"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="2_dhy4r"]
+[ext_resource type="Texture2D" uid="uid://b5f8n030w0jiy" path="res://images and assets/Sword.png" id="2_nsoe1"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="4_a0lo6"]
+[ext_resource type="Texture2D" uid="uid://se8cec8qnf5l" path="res://images and assets/logo.png" id="6_u4kvf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdl68"]
+bg_color = Color(0, 0, 0, 0.705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt3oe"]
+bg_color = Color(0.111197, 0.111197, 0.111197, 0.705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfl0m"]
+bg_color = Color(0, 0, 0, 0.705882)
+
+[node name="questOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ovi47")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(3113, 460)
+texture = ExtResource("1_5qpiq")
+expand_mode = 1
+
+[node name="buttonsSide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -633.0
+offset_top = -219.0
+offset_right = -49.0
+offset_bottom = 486.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questAloneButton" type="Button" parent="buttonsSide"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 97.0
+offset_right = 554.0
+offset_bottom = 234.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gdl68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tt3oe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lfl0m")
+text = "QUEST ALONE"
+icon = ExtResource("2_nsoe1")
+
+[node name="questTogetherButton" type="Button" parent="buttonsSide"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 431.0
+offset_right = 556.0
+offset_bottom = 547.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gdl68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tt3oe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lfl0m")
+text = "QUEST TOGETHER"
+icon = ExtResource("2_nsoe1")
+
+[node name="displaySide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -362.0
+offset_right = 695.0
+offset_bottom = 478.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="simpleBox" type="Sprite2D" parent="displaySide"]
+position = Vector2(444, 442)
+scale = Vector2(0.475657, 0.857723)
+texture = ExtResource("4_a0lo6")
+
+[node name="description" type="TextEdit" parent="displaySide/simpleBox"]
+anchors_preset = -1
+anchor_left = 0.047
+anchor_top = 0.034
+anchor_right = 0.975
+anchor_bottom = 0.963
+offset_left = -726.129
+offset_top = -411.982
+offset_right = -704.825
+offset_bottom = -411.549
+theme_override_font_sizes/font_size = 40
+wrap_mode = 1
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 21.0
+offset_right = 158.0
+offset_bottom = 80.0
+theme = ExtResource("2_dhy4r")
+text = "BACK"
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 15.0
+offset_right = 1860.0
+offset_bottom = 1015.0
+scale = Vector2(0.3, 0.295)
+texture = ExtResource("6_u4kvf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 119.0
+offset_right = 1545.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0.392157, 0.239216, 0.580392, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.0117647, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_font_sizes/font_size = 70
+text = "CHOOSE A GAMEPLAY OPTION"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="buttonsSide/questAloneButton" to="." method="_on_quest_alone_button_pressed"]
+[connection signal="pressed" from="buttonsSide/questTogetherButton" to="." method="_on_quest_together_button_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]

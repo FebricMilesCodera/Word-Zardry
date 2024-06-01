@@ -1,0 +1,130 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0dw0laakrkon"]
+
+[ext_resource type="Script" path="res://personalityQuiz.gd" id="1_n5xku"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_53ghq"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="3_bxl5m"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="4_gqomh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjoik"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vud3o"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[node name="mainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n5xku")
+metadata/_edit_use_anchors_ = true
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_53ghq")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -278.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="simpleBox" type="Sprite2D" parent="Control"]
+position = Vector2(405, 287)
+scale = Vector2(0.51226, 0.629708)
+texture = ExtResource("3_bxl5m")
+
+[node name="questionLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 37.0
+offset_right = 756.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qjoik")
+autowrap_mode = 3
+
+[node name="answerButton1" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 192.0
+offset_right = 676.0
+offset_bottom = 252.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="answerButton2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 278.0
+offset_right = 676.0
+offset_bottom = 338.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="answerButton3" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 360.0
+offset_right = 676.0
+offset_bottom = 420.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="answerButton4" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 443.0
+offset_right = 676.0
+offset_bottom = 503.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="loadingLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vud3o")
+text = "Loading questions..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 22.0
+offset_right = 165.0
+offset_bottom = 77.0
+scale = Vector2(1, 0.997794)
+theme = ExtResource("4_gqomh")
+text = "BACK"
+
+[connection signal="pressed" from="Control/answerButton1" to="." method="_on_answer_button_1_pressed"]
+[connection signal="pressed" from="Control/answerButton2" to="." method="_on_answer_button_2_pressed"]
+[connection signal="pressed" from="Control/answerButton3" to="." method="_on_answer_button_3_pressed"]
+[connection signal="pressed" from="Control/answerButton4" to="." method="_on_answer_button_4_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="backButton" to="." method="_on_Back_pressed"]

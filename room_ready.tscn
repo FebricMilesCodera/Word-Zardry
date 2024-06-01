@@ -1,0 +1,341 @@
+[gd_scene load_steps=23 format=3 uid="uid://gb5knhsrb8ly"]
+
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="1_5ulk5"]
+[ext_resource type="Script" path="res://cs/room_ready.cs" id="1_x51ns"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="3_4s6vn"]
+[ext_resource type="Theme" uid="uid://b4mwkq2yq6sf0" path="res://materials/wordzardryTheme9.tres" id="4_l0s6b"]
+[ext_resource type="Texture2D" uid="uid://dmvocwwuu4yvs" path="res://images and assets/hunter_emblems.png" id="5_6eqtl"]
+[ext_resource type="Theme" uid="uid://c017d7mwhr0dl" path="res://materials/jomol6.res" id="5_7g7iu"]
+[ext_resource type="Theme" uid="uid://c4hkt0q5oihrk" path="res://materials/wordzardryTheme10.tres" id="6_nu2g3"]
+[ext_resource type="Texture2D" uid="uid://3e0k55i20tgh" path="res://images and assets/warrior_emblems.png" id="6_q4n8h"]
+[ext_resource type="Theme" uid="uid://ba36xr4kj1mhy" path="res://materials/wordzardryTheme4.tres" id="7_5dxq5"]
+[ext_resource type="Texture2D" uid="uid://c8yexxpminm1" path="res://images and assets/priest_emblems.png" id="7_v71g0"]
+[ext_resource type="Texture2D" uid="uid://c4ooq7w8sekfd" path="res://images and assets/greencheck.webp" id="8_xx6ao"]
+[ext_resource type="Texture2D" uid="uid://dcdciosxceaio" path="res://images and assets/greendot-removebg-preview.png" id="9_w12j1"]
+[ext_resource type="Texture2D" uid="uid://bsit753lpucam" path="res://images and assets/gray_check.png" id="11_5b4mx"]
+[ext_resource type="Texture2D" uid="uid://tef3axuup4bp" path="res://images and assets/mage_emblems.png" id="11_qcjum"]
+[ext_resource type="Theme" uid="uid://bljl21poht4xg" path="res://materials/jomol9.res" id="13_v2kmk"]
+[ext_resource type="Texture2D" uid="uid://c4pntg6dbb36a" path="res://images and assets/Send Button.png" id="14_sbmil"]
+[ext_resource type="Theme" uid="uid://cc5loqybgj4fm" path="res://materials/jomol7.res" id="17_rrxte"]
+[ext_resource type="Theme" uid="uid://bqsporlc8uqk3" path="res://materials/jomol8.res" id="18_e0nqa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skhkb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_yxyeg"]
+LineEdit/colors/caret_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/font_sizes/font_size = 50
+LineEdit/styles/normal = SubResource("StyleBoxFlat_skhkb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgw3l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flgaa"]
+
+[node name="Room_Ready" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x51ns")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 8874.0
+offset_bottom = 3908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.216537)
+size_flags_horizontal = 0
+texture = ExtResource("1_5ulk5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1921.0
+offset_bottom = 1083.0
+
+[node name="Box" type="Sprite2D" parent="."]
+position = Vector2(584.992, 613.603)
+scale = Vector2(0.705057, 1.00511)
+texture = ExtResource("3_4s6vn")
+
+[node name="WaitLabel" type="Label" parent="Box"]
+offset_left = 222.688
+offset_top = -381.653
+offset_right = 402.688
+offset_bottom = -280.653
+theme = ExtResource("6_nu2g3")
+text = "WAIT"
+
+[node name="ReadyLabel4" type="Label" parent="Box"]
+offset_left = 209.923
+offset_top = -245.349
+offset_right = 352.923
+offset_bottom = -180.349
+theme = ExtResource("5_7g7iu")
+text = "THVTS"
+
+[node name="ReadyLabel6" type="Label" parent="Box"]
+offset_left = -388.61
+offset_top = 16.3136
+offset_right = -240.61
+offset_bottom = 81.3136
+theme = ExtResource("5_7g7iu")
+text = "TheLaw"
+
+[node name="ReadyLabel5" type="Label" parent="Box"]
+offset_left = 204.25
+offset_top = -104.071
+offset_right = 436.25
+offset_bottom = -39.0712
+theme = ExtResource("5_7g7iu")
+text = "SENTHERN"
+
+[node name="ReadyLabel3" type="Label" parent="Box"]
+offset_left = -391.446
+offset_top = -118.995
+offset_right = -210.446
+offset_bottom = -53.995
+theme = ExtResource("5_7g7iu")
+text = "Goldelites"
+
+[node name="ReadyLabel2" type="Label" parent="Box"]
+offset_left = -390.028
+offset_top = -255.298
+offset_right = -174.028
+offset_bottom = -190.298
+theme = ExtResource("5_7g7iu")
+text = "ZnarFlightZ"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Box"]
+offset_left = -685.04
+offset_top = -313.999
+offset_right = -62.0395
+offset_bottom = 247.001
+vertical_scroll_mode = 2
+scroll_deadzone = 2
+
+[node name="HunterEmblems" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(195.729, 374.088)
+scale = Vector2(0.380584, 0.249558)
+texture = ExtResource("5_6eqtl")
+
+[node name="WarriorEmblems" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(199.984, 96.5074)
+scale = Vector2(0.282483, 0.190566)
+texture = ExtResource("6_q4n8h")
+
+[node name="PriestEmblems" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(197.147, 228.83)
+scale = Vector2(0.30494, 0.180743)
+texture = ExtResource("7_v71g0")
+
+[node name="Greencheck3" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(568.748, 367.123)
+scale = Vector2(0.237259, 0.139437)
+texture = ExtResource("8_xx6ao")
+
+[node name="Greencheck2" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(565.912, 226.84)
+scale = Vector2(0.256119, 0.128938)
+texture = ExtResource("8_xx6ao")
+
+[node name="Greencheck" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(570.167, 96.5063)
+scale = Vector2(0.23491, 0.136179)
+texture = ExtResource("8_xx6ao")
+
+[node name="Greendot" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(41.1314, 126.354)
+scale = Vector2(0.0803909, 0.0485145)
+texture = ExtResource("9_w12j1")
+
+[node name="Greendot2" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(32.6214, 260.668)
+scale = Vector2(0.0691523, 0.0430649)
+texture = ExtResource("9_w12j1")
+
+[node name="Greendot3" type="Sprite2D" parent="Box/ScrollContainer"]
+position = Vector2(56.733, 390.007)
+scale = Vector2(0.0689067, 0.0547821)
+texture = ExtResource("9_w12j1")
+offset = Vector2(-432.249, 92.5654)
+
+[node name="GrayCheck2" type="Sprite2D" parent="Box"]
+position = Vector2(517.7, -210.03)
+scale = Vector2(0.271233, 0.193043)
+texture = ExtResource("11_5b4mx")
+
+[node name="GrayCheck" type="Sprite2D" parent="Box"]
+position = Vector2(511.318, -67.2593)
+scale = Vector2(0.310788, 0.217793)
+texture = ExtResource("11_5b4mx")
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="Box"]
+offset_left = -26.9368
+offset_top = -306.039
+offset_right = 576.063
+offset_bottom = 244.961
+vertical_scroll_mode = 2
+
+[node name="MageEmblems" type="Sprite2D" parent="Box/ScrollContainer2"]
+position = Vector2(146.504, 229.018)
+scale = Vector2(0.249181, 0.191726)
+texture = ExtResource("11_qcjum")
+
+[node name="HunterEmblems" type="Sprite2D" parent="Box/ScrollContainer2"]
+position = Vector2(154.445, 87.3795)
+scale = Vector2(0.298357, 0.232724)
+texture = ExtResource("5_6eqtl")
+
+[node name="Greendot5" type="Sprite2D" parent="Box/ScrollContainer2"]
+position = Vector2(63.8246, 236.79)
+scale = Vector2(0.106231, 0.0528694)
+texture = ExtResource("9_w12j1")
+offset = Vector2(-432.249, 92.5654)
+
+[node name="Greendot4" type="Sprite2D" parent="Box/ScrollContainer2"]
+position = Vector2(59.5696, 90.5372)
+scale = Vector2(0.0918752, 0.0521883)
+texture = ExtResource("9_w12j1")
+offset = Vector2(-432.249, 92.5654)
+
+[node name="ReadyLabel" type="Label" parent="Box"]
+offset_left = -443.0
+offset_top = -387.0
+offset_right = -213.0
+offset_bottom = -290.0
+theme = ExtResource("13_v2kmk")
+text = "READY"
+
+[node name="ReadyButton" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 0
+offset_left = 371.0
+offset_top = 908.0
+offset_right = 786.0
+offset_bottom = 968.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_l0s6b")
+theme_override_font_sizes/font_size = 31
+text = "READY"
+
+[node name="Box2" type="Sprite2D" parent="."]
+position = Vector2(1508, 627.901)
+scale = Vector2(0.452561, 0.93293)
+texture = ExtResource("3_4s6vn")
+
+[node name="HunterEmblems" type="Sprite2D" parent="Box2"]
+position = Vector2(-448.144, -32.5475)
+scale = Vector2(0.477376, 0.189522)
+texture = ExtResource("6_q4n8h")
+
+[node name="PriestEmblems" type="Sprite2D" parent="Box2"]
+position = Vector2(-448.558, 178.04)
+scale = Vector2(0.458962, 0.215495)
+texture = ExtResource("7_v71g0")
+
+[node name="LineEdit" type="LineEdit" parent="Box2"]
+offset_left = -608.0
+offset_top = 284.0
+offset_right = 455.0
+offset_bottom = 353.0
+theme = SubResource("Theme_yxyeg")
+
+[node name="SendButton" type="Sprite2D" parent="Box2"]
+position = Vector2(570.089, 317.386)
+scale = Vector2(2.90744, 1.54552)
+texture = ExtResource("14_sbmil")
+
+[node name="VBoxContainer2" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 40.0
+scale = Vector2(1.35587, 1.28989)
+
+[node name="Back" type="Button" parent="VBoxContainer2"]
+layout_mode = 0
+offset_left = 8.00006
+offset_top = 13.0
+offset_right = 108.0
+offset_bottom = 64.0
+theme = ExtResource("7_5dxq5")
+text = "BACK"
+
+[node name="Chat2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1350.0
+offset_top = 710.0
+offset_right = 1566.0
+offset_bottom = 775.0
+theme = ExtResource("17_rrxte")
+text = "Goldelites"
+
+[node name="Chat2" type="Label" parent="Chat2"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = -127.0
+offset_right = 424.0
+offset_bottom = -87.0
+theme = ExtResource("18_e0nqa")
+theme_override_colors/font_outline_color = Color(0.898039, 0.658824, 0.658824, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_sgw3l")
+text = "Hello Everyone! Lets defeat this boss!"
+
+[node name="Chat2" type="Label" parent="Chat2/Chat2"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 41.0
+offset_right = 430.0
+offset_bottom = 81.0
+theme = ExtResource("13_v2kmk")
+text = "11:00a.m."
+
+[node name="Chat" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1355.0
+offset_top = 515.0
+offset_right = 1571.0
+offset_bottom = 580.0
+pivot_offset = Vector2(668, 28)
+theme = ExtResource("17_rrxte")
+text = "ZnarFlightZ"
+
+[node name="Chat2" type="Label" parent="Chat"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 268.0
+offset_right = 113.0
+offset_bottom = 308.0
+theme = ExtResource("18_e0nqa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_flgaa")
+text = "Lets Go!"
+
+[node name="Chat2" type="Label" parent="Chat/Chat2"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 47.0
+offset_right = 151.0
+offset_bottom = 87.0
+theme = ExtResource("13_v2kmk")
+text = "11:01a.m."
+
+[node name="RoomNameLabel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 45.0
+offset_right = 1317.0
+offset_bottom = 166.0
+theme = ExtResource("6_nu2g3")
+text = "Room Name"

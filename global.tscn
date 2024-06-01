@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://5vx62tvqfk8l"]
+
+[ext_resource type="Script" path="res://global.gd" id="1_7n2vx"]
+[ext_resource type="AudioStream" uid="uid://dy16nljhrxu44" path="res://Sound Effects/buttonClick.mp3" id="2_vqg0t"]
+
+[node name="Global" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7n2vx")
+
+[node name="sfx_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vqg0t")
+
+[node name="bgmusic_player" type="AudioStreamPlayer" parent="."]

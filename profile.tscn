@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://f8bn70df52bi"]
+
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="1_0x2wf"]
+[ext_resource type="Script" path="res://cs/profile.cs" id="1_q1afa"]
+[ext_resource type="Texture2D" uid="uid://cveptwmkdrpjh" path="res://images and assets/Box2.png" id="2_80y3e"]
+[ext_resource type="Theme" uid="uid://fvbxhiulsn7c" path="res://materials/wordzardryTheme5.tres" id="4_lbv0k"]
+[ext_resource type="Texture2D" uid="uid://b82lib04hsoux" path="res://images and assets/Rectangle 12.png" id="5_0n2wd"]
+[ext_resource type="Texture2D" uid="uid://dmvocwwuu4yvs" path="res://images and assets/hunter_emblems.png" id="6_5mu2l"]
+[ext_resource type="Texture2D" uid="uid://ce3ks6lhuh1en" path="res://images and assets/hunter_sprite_final.png" id="7_oimh6"]
+[ext_resource type="Theme" uid="uid://peea3vj20vqd" path="res://materials/wordzardryTheme6.tres" id="8_ho2ec"]
+[ext_resource type="Texture2D" uid="uid://dq7r4l7hfn5h4" path="res://images and assets/Screenshot 2024-05-17 085540.png" id="9_sdx85"]
+[ext_resource type="Texture2D" uid="uid://dldhhwhbii8eq" path="res://images and assets/Screenshot 2024-05-17 085555.png" id="10_lr74c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q1afa")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 8885.0
+offset_bottom = 3908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.217)
+size_flags_horizontal = 0
+texture = ExtResource("1_0x2wf")
+
+[node name="Box2" type="Sprite2D" parent="."]
+position = Vector2(964, 583)
+scale = Vector2(1.44242, 1.26931)
+texture = ExtResource("2_80y3e")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 31.0
+offset_right = 164.0
+offset_bottom = 104.0
+theme = ExtResource("4_lbv0k")
+text = "BACK "
+
+[node name="Rectangle12" type="Sprite2D" parent="."]
+position = Vector2(540, 607)
+scale = Vector2(0.643478, 1.00417)
+texture = ExtResource("5_0n2wd")
+
+[node name="HunterEmblems" type="Sprite2D" parent="."]
+position = Vector2(375, 340)
+scale = Vector2(0.52, 0.525)
+texture = ExtResource("6_5mu2l")
+
+[node name="HunterSpriteFinal" type="Sprite2D" parent="."]
+position = Vector2(540, 594)
+texture = ExtResource("7_oimh6")
+
+[node name="playerName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 246.0
+offset_right = 1018.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 77
+text = "THVTS"
+
+[node name="Class" type="Label" parent="."]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 357.0
+offset_right = 976.0
+offset_bottom = 439.0
+theme_override_font_sizes/font_size = 54
+text = "Hunter"
+
+[node name="General Report" type="Label" parent="."]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 555.0
+offset_right = 1219.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 54
+text = "Generel Report:"
+
+[node name="Change Class" type="Button" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 445.0
+offset_right = 1117.0
+offset_bottom = 524.0
+theme = ExtResource("4_lbv0k")
+text = "Change 	Class "
+
+[node name="Change Password" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1170.0
+offset_top = 444.0
+offset_right = 1483.0
+offset_bottom = 523.0
+theme = ExtResource("4_lbv0k")
+text = "Change Password"
+
+[node name="MainFrame" type="Sprite2D" parent="."]
+position = Vector2(1208.5, 809)
+scale = Vector2(1.3087, 0.547579)
+texture = ExtResource("5_0n2wd")
+
+[node name="TextEdit" type="TextEdit" parent="MainFrame"]
+anchors_preset = -1
+anchor_right = 1.026
+anchor_bottom = 1.029
+offset_left = -336.0
+offset_top = -301.0
+offset_right = -354.94
+offset_bottom = -311.371
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.990279)
+theme = ExtResource("8_ho2ec")
+theme_override_constants/line_spacing = 1
+theme_override_constants/outline_size = 3
+scroll_smooth = true
+
+[node name="Screenshot2024-05-17085540" type="Sprite2D" parent="."]
+position = Vector2(1224.88, 703)
+scale = Vector2(1.2092, 1)
+texture = ExtResource("9_sdx85")
+
+[node name="Screenshot2024-05-17085555" type="Sprite2D" parent="."]
+position = Vector2(1224.75, 803)
+scale = Vector2(1.19517, 1)
+texture = ExtResource("10_lr74c")

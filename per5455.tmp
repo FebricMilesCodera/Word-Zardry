@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0dw0laakrkon"]
+
+[ext_resource type="Script" path="res://gd/personality_quiz.gd" id="1_wr6dl"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_53ghq"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="3_bxl5m"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="4_gqomh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjoik"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vud3o"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[node name="mainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wr6dl")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1081.0
+texture = ExtResource("2_53ghq")
+expand_mode = 1
+
+[node name="simpleBox" type="Sprite2D" parent="."]
+position = Vector2(982, 600)
+scale = Vector2(0.711443, 0.942892)
+texture = ExtResource("3_bxl5m")
+
+[node name="questionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 227.0
+offset_right = 1469.0
+offset_bottom = 379.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qjoik")
+autowrap_mode = 3
+
+[node name="answerButton1" type="Button" parent="."]
+layout_mode = 2
+offset_left = 597.0
+offset_top = 427.0
+offset_right = 1386.0
+offset_bottom = 500.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="answerButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 599.0
+offset_top = 556.0
+offset_right = 1386.0
+offset_bottom = 632.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="answerButton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 708.0
+offset_right = 1387.0
+offset_bottom = 779.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="answerButton4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 854.0
+offset_right = 1386.0
+offset_bottom = 929.0
+theme = ExtResource("4_gqomh")
+theme_override_font_sizes/font_size = 20
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="loadingLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vud3o")
+text = "Loading questions..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 22.0
+offset_right = 142.0
+offset_bottom = 59.0
+scale = Vector2(1, 0.997794)
+theme = ExtResource("4_gqomh")
+text = "BACK"
+
+[connection signal="pressed" from="answerButton1" to="." method="_on_answer_button_1_pressed"]
+[connection signal="pressed" from="answerButton2" to="." method="_on_answer_button_2_pressed"]
+[connection signal="pressed" from="answerButton3" to="." method="_on_answer_button_3_pressed"]
+[connection signal="pressed" from="answerButton4" to="." method="_on_answer_button_4_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

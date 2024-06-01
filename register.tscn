@@ -1,0 +1,194 @@
+[gd_scene load_steps=9 format=3 uid="uid://dx5vowq20asb5"]
+
+[ext_resource type="Script" path="res://register.gd" id="1_m4tk2"]
+[ext_resource type="Texture2D" uid="uid://tmj2cv40kdux" path="res://images and assets/Register Frame.png" id="2_3fqpv"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_5gnvk"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="3_ftakb"]
+[ext_resource type="Texture2D" uid="uid://f1gbn041vmyp" path="res://images and assets/OR Line (2).png" id="5_vw563"]
+[ext_resource type="Theme" uid="uid://gfhanagtlefv" path="res://Wordzardry3.tres" id="6_dm818"]
+[ext_resource type="Texture2D" uid="uid://t04sfk1wvvsd" path="res://images and assets/Instructor img.png" id="7_uy41n"]
+[ext_resource type="Texture2D" uid="uid://c2f0uhrwvol75" path="res://images and assets/Learner img.png" id="8_bloxe"]
+
+[node name="register" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4tk2")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5gnvk")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -241.5
+offset_right = 316.0
+offset_bottom = 241.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.999049)
+texture = ExtResource("2_3fqpv")
+expand_mode = 1
+
+[node name="registerButton" type="Button" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 263.0
+offset_top = 382.864
+offset_right = 366.0
+offset_bottom = 419.864
+theme = ExtResource("3_ftakb")
+text = "SIGN UP"
+
+[node name="username" type="Label" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 105.0
+offset_top = 148.641
+offset_right = 185.0
+offset_bottom = 175.641
+text = "Username"
+
+[node name="email" type="Label" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 105.0
+offset_top = 199.69
+offset_right = 185.0
+offset_bottom = 226.69
+text = "Email"
+
+[node name="password" type="Label" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 105.0
+offset_top = 248.737
+offset_right = 185.0
+offset_bottom = 275.737
+text = "Password"
+
+[node name="usernameTxt" type="LineEdit" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 207.0
+offset_top = 143.5
+offset_right = 510.0
+offset_bottom = 174.5
+theme = ExtResource("3_ftakb")
+theme_override_colors/font_placeholder_color = Color(1, 0, 0, 1)
+
+[node name="emailTxt" type="LineEdit" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 207.0
+offset_top = 193.684
+offset_right = 510.0
+offset_bottom = 224.684
+theme = ExtResource("3_ftakb")
+theme_override_colors/font_placeholder_color = Color(1, 0, 0, 1)
+
+[node name="passwordTxt" type="LineEdit" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 207.0
+offset_top = 245.734
+offset_right = 510.0
+offset_bottom = 276.734
+theme = ExtResource("3_ftakb")
+theme_override_colors/font_placeholder_color = Color(1, 0, 0, 1)
+max_length = 20
+secret = true
+
+[node name="alreadyHaveanAccount" type="Label" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 59.0
+offset_top = 433.913
+offset_right = 256.0
+offset_bottom = 460.913
+text = "Already have an account?"
+
+[node name="loginClick" type="Button" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 263.0
+offset_top = 429.909
+offset_right = 334.0
+offset_bottom = 460.909
+scale = Vector2(1.0096, 1.00704)
+text = "Sign in!"
+
+[node name="OrLine(2)" type="Sprite2D" parent="Frame"]
+texture_filter = 1
+position = Vector2(316, 327.5)
+scale = Vector2(0.66129, 0.685567)
+texture = ExtResource("5_vw563")
+
+[node name="instructorButton" type="Button" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 120.0
+offset_top = 310.0
+offset_right = 285.0
+offset_bottom = 351.0
+theme = ExtResource("6_dm818")
+text = "INSTRUCTOR"
+icon = ExtResource("7_uy41n")
+expand_icon = true
+
+[node name="learnerButton" type="Button" parent="Frame"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 344.0
+offset_top = 310.0
+offset_right = 501.0
+offset_bottom = 351.0
+theme = ExtResource("6_dm818")
+text = "LEARNER"
+icon = ExtResource("8_bloxe")
+expand_icon = true
+
+[node name="errorLabel" type="Label" parent="Frame"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 114.609
+offset_right = 323.0
+offset_bottom = 137.609
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+
+[node name="quitButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme = ExtResource("3_ftakb")
+text = "QUIT"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Frame/registerButton" to="." method="_on_register_button_pressed"]
+[connection signal="pressed" from="Frame/loginClick" to="." method="_on_loginClick_pressed"]
+[connection signal="pressed" from="Frame/instructorButton" to="." method="_on_instructor_button_pressed"]
+[connection signal="pressed" from="Frame/learnerButton" to="." method="_on_learner_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]

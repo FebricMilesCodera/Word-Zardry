@@ -1,0 +1,167 @@
+[gd_scene load_steps=10 format=3 uid="uid://dlqa2fvuisxao"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_iy0oe"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="1_xvkbt"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="2_acv5k"]
+[ext_resource type="Theme" uid="uid://bpy82eg4w0ydr" path="res://materials/toggle.tres" id="3_0rs08"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="4_dvmef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pe03d"]
+bg_color = Color(0, 1, 0.443137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qubyb"]
+bg_color = Color(0, 1, 0.443137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tue2t"]
+bg_color = Color(0, 1, 0.443137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbwx6"]
+bg_color = Color(0, 1, 0.443137, 1)
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iy0oe")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xvkbt")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -748.0
+offset_top = -499.0
+offset_right = 736.0
+offset_bottom = 508.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="simpleBox" type="Sprite2D" parent="CenterContainer"]
+position = Vector2(781.125, 523)
+scale = Vector2(0.952203, 1.08141)
+texture = ExtResource("2_acv5k")
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/simpleBox"]
+offset_left = -683.0
+offset_top = -393.0
+offset_right = 683.0
+offset_bottom = -221.0
+color = Color(0.652429, 0.520544, 0.0414202, 1)
+
+[node name="optionsLabel" type="Label" parent="CenterContainer/simpleBox/ColorRect"]
+layout_mode = 0
+offset_left = 542.645
+offset_top = 30.5965
+offset_right = 866.645
+offset_bottom = 127.597
+theme_override_font_sizes/font_size = 70
+text = "OPTIONS"
+
+[node name="bgmusicLabel" type="Label" parent="CenterContainer/simpleBox"]
+offset_left = -556.818
+offset_top = -157.919
+offset_right = -204.818
+offset_bottom = -102.919
+theme_override_font_sizes/font_size = 40
+text = "Background Music"
+
+[node name="sfxLabel" type="Label" parent="CenterContainer/simpleBox"]
+offset_left = -556.818
+offset_top = -4.0492
+offset_right = -296.818
+offset_bottom = 50.9508
+theme_override_font_sizes/font_size = 40
+text = "Sound Effects"
+
+[node name="fullscreenLabel" type="Label" parent="CenterContainer/simpleBox"]
+offset_left = -556.818
+offset_top = 157.919
+offset_right = -347.818
+offset_bottom = 220.919
+theme_override_font_sizes/font_size = 40
+text = "Fullscreen"
+
+[node name="bgmusicButton" type="CheckButton" parent="CenterContainer/simpleBox"]
+offset_left = -181.771
+offset_top = -149.82
+offset_right = -89.7711
+offset_bottom = -69.8204
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("3_0rs08")
+theme_override_font_sizes/font_size = 40
+button_pressed = true
+
+[node name="sfxButton" type="CheckButton" parent="CenterContainer/simpleBox"]
+offset_left = -181.771
+offset_top = 2.0246
+offset_right = -89.7711
+offset_bottom = 82.0246
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("3_0rs08")
+button_pressed = true
+
+[node name="fullscreenButton" type="CheckButton" parent="CenterContainer/simpleBox"]
+offset_left = -181.771
+offset_top = 163.993
+offset_right = -89.7711
+offset_bottom = 243.993
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("3_0rs08")
+
+[node name="confirmButton" type="Button" parent="CenterContainer/simpleBox"]
+offset_left = -140.355
+offset_top = 271.296
+offset_right = 147.645
+offset_bottom = 350.296
+theme = ExtResource("4_dvmef")
+theme_override_font_sizes/font_size = 30
+text = "Confirm"
+
+[node name="bgmusicSlider" type="HSlider" parent="CenterContainer/simpleBox"]
+offset_left = -106.0
+offset_top = -150.0
+offset_right = 598.0
+offset_bottom = -112.0
+size_flags_horizontal = 3
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_pe03d")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_qubyb")
+
+[node name="sfxSlider" type="HSlider" parent="CenterContainer/simpleBox"]
+offset_left = -105.841
+offset_top = 2.0246
+offset_right = 598.159
+offset_bottom = 40.0246
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_tue2t")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_vbwx6")
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 22.0
+offset_right = 165.0
+offset_bottom = 77.0
+scale = Vector2(1, 0.997794)
+theme = ExtResource("4_dvmef")
+text = "BACK"
+
+[connection signal="toggled" from="CenterContainer/simpleBox/bgmusicButton" to="." method="_on_bgmusic_button_toggled"]
+[connection signal="toggled" from="CenterContainer/simpleBox/sfxButton" to="." method="_on_sfx_button_toggled"]
+[connection signal="toggled" from="CenterContainer/simpleBox/fullscreenButton" to="." method="_on_fullscreen_button_toggled"]
+[connection signal="pressed" from="CenterContainer/simpleBox/confirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_Back_pressed"]

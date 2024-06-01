@@ -1,0 +1,148 @@
+[gd_scene load_steps=7 format=3 uid="uid://rxwfxx0w1lfc"]
+
+[ext_resource type="Script" path="res://cs/Lore.cs" id="1_ot4cg"]
+[ext_resource type="Texture2D" uid="uid://b82lib04hsoux" path="res://images and assets/Rectangle 12.png" id="2_xf80e"]
+[ext_resource type="Theme" uid="uid://ba36xr4kj1mhy" path="res://materials/wordzardryTheme4.tres" id="3_neyeh"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="5_fs5h1"]
+[ext_resource type="Texture2D" uid="uid://se8cec8qnf5l" path="res://images and assets/logo.png" id="5_u83xf"]
+[ext_resource type="Texture2D" uid="uid://cbevtnooh3fuc" path="res://images and assets/sound.png" id="6_qqgrr"]
+
+[node name="Main Menu 2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ot4cg")
+
+[node name="MainFrame" type="Sprite2D" parent="."]
+position = Vector2(958.5, 542)
+scale = Vector2(2.80725, 1.83973)
+texture = ExtResource("2_xf80e")
+
+[node name="VBoxContainer2" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 40.0
+scale = Vector2(1.35587, 1.28989)
+
+[node name="Back" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 108.0
+offset_bottom = 64.0
+theme = ExtResource("3_neyeh")
+text = "BACK"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 29.0
+offset_right = 1258.0
+offset_bottom = 1032.0
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/line_spacing = 24
+theme_override_font_sizes/font_size = 40
+text = "At first sight of the Enchanted Forest, the essence of magic grows thicker as it becomes a drowning sensation for a prophesied hero to save these forests. Legends say that the faeries are territorial in their forests, as they do not want any trespassers inside of their home. They have lived without the need for humans until the corruption of the forest's magic began to seep out and corrupt the nearby forests, fields, and even ruined kingdoms. The Queen of the Faeries became twisted for expansion and power... and it is up to a lone Woodland Knight to cease the enchanted forest's                      and put a stop to the Queen's hunger for power."
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1371.0
+offset_top = -5.0
+offset_right = 2724.0
+offset_bottom = 1222.0
+scale = Vector2(0.3, 0.295)
+texture = ExtResource("5_u83xf")
+
+[node name="Label" type="Label" parent="Logo"]
+layout_mode = 2
+offset_left = -420.0
+offset_top = 877.966
+offset_right = 1774.0
+offset_bottom = 1314.97
+theme_override_colors/font_color = Color(0.392157, 0.239216, 0.580392, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.0117647, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_font_sizes/font_size = 320
+text = "Warrior's Lore"
+horizontal_alignment = 1
+
+[node name="Box2" type="Sprite2D" parent="."]
+position = Vector2(1565, 631.775)
+scale = Vector2(0.364162, 0.552188)
+texture = ExtResource("5_fs5h1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 899.0
+offset_right = 627.0
+offset_bottom = 1024.0
+theme_override_colors/font_color = Color(0.392157, 0.239216, 0.580392, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.0117647, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "expansion"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1415.0
+offset_top = 450.0
+offset_right = 1612.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0.392157, 0.239216, 0.580392, 1)
+theme_override_colors/font_shadow_color = Color(0.145098, 0.0117647, 0.117647, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "expansion"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1334.0
+offset_top = 552.0
+offset_right = 1805.0
+offset_bottom = 854.0
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/line_spacing = 24
+theme_override_font_sizes/font_size = 40
+text = "1. expanse. 
+2. the action of becoming larger or more extensive."
+autowrap_mode = 2
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1665.0
+offset_top = 949.0
+offset_right = 1765.0
+offset_bottom = 1000.0
+theme = ExtResource("3_neyeh")
+text = "NEXT"
+
+[node name="Sound" type="Sprite2D" parent="."]
+position = Vector2(1379, 481)
+scale = Vector2(0.221074, 0.206731)
+texture = ExtResource("6_qqgrr")

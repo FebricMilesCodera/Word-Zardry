@@ -1,0 +1,266 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyqdspawa88y8"]
+
+[ext_resource type="Script" path="res://main_menu_instructor.gd" id="1_iunln"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_vkivx"]
+[ext_resource type="Texture2D" uid="uid://bfxu20i7ot5nd" path="res://images and assets/Profile Screen.png" id="3_l06vy"]
+[ext_resource type="Texture2D" uid="uid://bs5ilavkwv8qc" path="res://images and assets/logo4.png" id="4_whukw"]
+[ext_resource type="Texture2D" uid="uid://ckeaaun4oki1v" path="res://images and assets/title2.png" id="5_u5wmo"]
+[ext_resource type="Texture2D" uid="uid://cfaovjms27115" path="res://images and assets/Room.png" id="6_0d3hg"]
+[ext_resource type="Texture2D" uid="uid://covhba15mpc4p" path="res://images and assets/Manage.png" id="7_30mu1"]
+[ext_resource type="Texture2D" uid="uid://yv5f32hvgega" path="res://images and assets/Gear.png" id="7_52gdv"]
+[ext_resource type="Texture2D" uid="uid://doxjql1u0ohp4" path="res://images and assets/Leave.png" id="8_khp15"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="9_j6sdi"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="10_eurem"]
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iunln")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vkivx")
+expand_mode = 1
+
+[node name="titleSide" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 447.0
+offset_bottom = 600.0
+
+[node name="updateScreen" type="Sprite2D" parent="titleSide"]
+position = Vector2(456, 632)
+scale = Vector2(1.18707, 1.45165)
+texture = ExtResource("3_l06vy")
+
+[node name="updateLabel" type="Label" parent="titleSide/updateScreen"]
+offset_left = -255.69
+offset_top = -230.624
+offset_right = -107.69
+offset_bottom = -186.624
+theme_override_colors/font_color = Color(0.847059, 0.721569, 0.105882, 1)
+theme_override_font_sizes/font_size = 30
+text = "UPDATES"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="titleSide/updateScreen"]
+offset_left = -256.0
+offset_top = -163.0
+offset_right = 248.0
+offset_bottom = 238.0
+
+[node name="updateTxt" type="TextEdit" parent="titleSide/updateScreen/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch."
+editable = false
+selecting_enabled = false
+wrap_mode = 1
+
+[node name="Logo" type="Sprite2D" parent="titleSide"]
+position = Vector2(457, 116)
+scale = Vector2(0.225125, 0.216875)
+texture = ExtResource("4_whukw")
+
+[node name="Title" type="Sprite2D" parent="titleSide/Logo"]
+position = Vector2(155.469, 539.481)
+scale = Vector2(6.43884, 7.20168)
+texture = ExtResource("5_u5wmo")
+
+[node name="ButtonsSide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -300.0
+offset_bottom = 300.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="roomButton" type="Button" parent="ButtonsSide"]
+layout_mode = 2
+offset_left = 74.0
+offset_top = 135.0
+offset_right = 301.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 20
+text = "ROOM"
+icon = ExtResource("6_0d3hg")
+expand_icon = true
+
+[node name="manageButton" type="Button" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 235.0
+offset_right = 301.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 20
+text = "MANAGE"
+icon = ExtResource("7_30mu1")
+expand_icon = true
+
+[node name="optionsButton" type="Button" parent="ButtonsSide"]
+layout_mode = 2
+offset_left = 74.0
+offset_top = 338.0
+offset_right = 301.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 20
+text = "OPTIONS"
+icon = ExtResource("7_52gdv")
+expand_icon = true
+
+[node name="quitButton" type="Button" parent="ButtonsSide"]
+layout_mode = 2
+offset_left = 74.0
+offset_top = 445.0
+offset_right = 301.0
+offset_bottom = 514.0
+scale = Vector2(1, 1.003)
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+icon = ExtResource("8_khp15")
+expand_icon = true
+
+[node name="welcomeBox" type="ColorRect" parent="ButtonsSide"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -353.0
+offset_right = 269.0
+offset_bottom = 96.0
+grow_horizontal = 0
+scale = Vector2(0.570916, 0.713542)
+color = Color(0, 0, 0, 0.509804)
+
+[node name="logoutButton" type="Button" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 16.0
+offset_right = 331.0
+offset_bottom = 53.0
+scale = Vector2(1, 0.997794)
+theme = ExtResource("9_j6sdi")
+text = "LOGOUT"
+
+[node name="welcome" type="Label" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 23.0
+offset_right = 89.0
+offset_bottom = 56.0
+text = "Welcome,"
+
+[node name="playerName" type="Button" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 19.0
+offset_right = 214.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.894118, 0.717647, 0.0823529, 1)
+text = "[player_name]"
+
+[node name="quitPrompt" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.705882)
+
+[node name="simpleBox" type="TextureRect" parent="quitPrompt"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -165.0
+offset_right = 1070.0
+offset_bottom = 658.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.472281, 0.424666)
+texture = ExtResource("10_eurem")
+
+[node name="promptLabel" type="Label" parent="quitPrompt/simpleBox"]
+layout_mode = 0
+offset_left = 347.251
+offset_top = 167.19
+offset_right = 1089.25
+offset_bottom = 257.19
+theme_override_font_sizes/font_size = 50
+text = "Are you sure you want to quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yesButton" type="Button" parent="quitPrompt/simpleBox"]
+layout_mode = 0
+offset_left = 190.564
+offset_top = 449.765
+offset_right = 569.564
+offset_bottom = 579.765
+theme = ExtResource("9_j6sdi")
+theme_override_font_sizes/font_size = 60
+text = "YES"
+
+[node name="noButton" type="Button" parent="quitPrompt/simpleBox"]
+layout_mode = 0
+offset_left = 836.366
+offset_top = 449.765
+offset_right = 1215.37
+offset_bottom = 579.765
+theme = ExtResource("9_j6sdi")
+theme_override_font_sizes/font_size = 60
+text = "NO"
+
+[connection signal="pressed" from="ButtonsSide/roomButton" to="." method="_on_room_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/manageButton" to="." method="_on_manage_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/optionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/logoutButton" to="." method="_on_logout_button_pressed"]
+[connection signal="pressed" from="quitPrompt/simpleBox/yesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="quitPrompt/simpleBox/noButton" to="." method="_on_no_button_pressed"]

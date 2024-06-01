@@ -1,0 +1,131 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7wlbg8wnsoc0"]
+
+[ext_resource type="Script" path="res://cs/billing.cs" id="1_0y51p"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_t360a"]
+[ext_resource type="Theme" uid="uid://fvbxhiulsn7c" path="res://materials/wordzardryTheme5.tres" id="3_t0nk7"]
+[ext_resource type="Texture2D" uid="uid://cveptwmkdrpjh" path="res://images and assets/Box2.png" id="4_60t45"]
+[ext_resource type="Texture2D" uid="uid://dwfoilgk3p8h5" path="res://images and assets/billing cards.png" id="5_1axdb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6jfd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_h5xr2"]
+LineEdit/colors/caret_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/font_sizes/font_size = 50
+LineEdit/styles/normal = SubResource("StyleBoxFlat_h6jfd")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0y51p")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 8885.0
+offset_bottom = 3908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.217)
+size_flags_horizontal = 0
+texture = ExtResource("2_t360a")
+
+[node name="Box2" type="Sprite2D" parent="TempBack"]
+position = Vector2(5238.32, 2465.44)
+scale = Vector2(8.12457, 5.84936)
+texture = ExtResource("4_60t45")
+
+[node name="SubscriptionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 684.0
+offset_right = 442.0
+offset_bottom = 785.0
+theme_override_font_sizes/font_size = 73
+text = "CVV"
+autowrap_mode = 2
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 810.0
+offset_right = 1399.0
+offset_bottom = 883.0
+theme = ExtResource("3_t0nk7")
+text = "CONFIRM"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 31.0
+offset_right = 164.0
+offset_bottom = 104.0
+theme = ExtResource("3_t0nk7")
+text = "BACK "
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 807.0
+offset_right = 666.0
+offset_bottom = 876.0
+theme = SubResource("Theme_h5xr2")
+
+[node name="Expiration Date" type="Label" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 408.0
+offset_right = 698.0
+offset_bottom = 491.0
+theme_override_font_sizes/font_size = 60
+text = "Expiration Date"
+autowrap_mode = 2
+
+[node name="LineEdit2" type="LineEdit" parent="Expiration Date"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 112.0
+offset_right = 1140.0
+offset_bottom = 181.0
+theme = SubResource("Theme_h5xr2")
+placeholder_text = "Year"
+
+[node name="LineEdit" type="LineEdit" parent="Expiration Date"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 112.0
+offset_right = 536.0
+offset_bottom = 181.0
+theme = SubResource("Theme_h5xr2")
+placeholder_text = "Month"
+
+[node name="Card Number" type="Label" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 178.0
+offset_right = 600.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 50
+text = "Card Number"
+autowrap_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="Card Number"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 101.0
+offset_right = 932.0
+offset_bottom = 191.0
+theme = SubResource("Theme_h5xr2")
+
+[node name="BillingCards" type="Sprite2D" parent="."]
+position = Vector2(1063, 192)
+texture = ExtResource("5_1axdb")

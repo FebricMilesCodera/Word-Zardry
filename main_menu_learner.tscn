@@ -1,0 +1,253 @@
+[gd_scene load_steps=11 format=3 uid="uid://di8n2reu43jn2"]
+
+[ext_resource type="Script" path="res://main_menu_learner.gd" id="1_sdikm"]
+[ext_resource type="Texture2D" uid="uid://bfxu20i7ot5nd" path="res://images and assets/Profile Screen.png" id="2_r4n4m"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_xhodv"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="5_mogi5"]
+[ext_resource type="Texture2D" uid="uid://b5f8n030w0jiy" path="res://images and assets/Sword.png" id="6_x7cxy"]
+[ext_resource type="Texture2D" uid="uid://yv5f32hvgega" path="res://images and assets/Gear.png" id="7_lou5t"]
+[ext_resource type="Texture2D" uid="uid://doxjql1u0ohp4" path="res://images and assets/Leave.png" id="8_txj8d"]
+[ext_resource type="Texture2D" uid="uid://bs5ilavkwv8qc" path="res://images and assets/logo4.png" id="10_38mw6"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="10_hb0yg"]
+[ext_resource type="Texture2D" uid="uid://ckeaaun4oki1v" path="res://images and assets/title2.png" id="11_lwmh2"]
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sdikm")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xhodv")
+expand_mode = 1
+
+[node name="titleSide" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 976.0
+offset_bottom = 1051.0
+
+[node name="updateScreen" type="Sprite2D" parent="titleSide"]
+position = Vector2(552, 652)
+scale = Vector2(1.29353, 1.41262)
+texture = ExtResource("2_r4n4m")
+
+[node name="updateLabel" type="Label" parent="titleSide/updateScreen"]
+offset_left = -255.69
+offset_top = -230.624
+offset_right = -107.69
+offset_bottom = -186.624
+theme_override_colors/font_color = Color(0.847059, 0.721569, 0.105882, 1)
+theme_override_font_sizes/font_size = 30
+text = "UPDATES"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="titleSide/updateScreen"]
+offset_left = -256.0
+offset_top = -163.0
+offset_right = 248.0
+offset_bottom = 238.0
+
+[node name="updateTxt" type="TextEdit" parent="titleSide/updateScreen/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch.
+
+ February 24, 2024
+	-Minor bug fixes
+	-Fixed\"black screen\" problem during launch."
+editable = false
+selecting_enabled = false
+wrap_mode = 1
+
+[node name="Logo" type="Sprite2D" parent="titleSide"]
+position = Vector2(563.875, 117.625)
+scale = Vector2(0.23625, 0.21275)
+texture = ExtResource("10_38mw6")
+
+[node name="Title" type="Sprite2D" parent="titleSide/Logo"]
+position = Vector2(-20.635, 565.805)
+scale = Vector2(5.21978, 5.311)
+texture = ExtResource("11_lwmh2")
+
+[node name="ButtonsSide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -491.0
+offset_top = -427.0
+offset_bottom = 521.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="playButton" type="Button" parent="ButtonsSide"]
+layout_mode = 2
+offset_left = 80.0
+offset_top = 283.0
+offset_right = 390.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 20
+text = "PLAY"
+icon = ExtResource("6_x7cxy")
+expand_icon = true
+
+[node name="optionsButton" type="Button" parent="ButtonsSide"]
+layout_mode = 2
+offset_left = 83.0
+offset_top = 423.0
+offset_right = 391.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 20
+text = "OPTIONS"
+icon = ExtResource("7_lou5t")
+expand_icon = true
+
+[node name="quitButton" type="Button" parent="ButtonsSide"]
+layout_mode = 2
+offset_left = 88.0
+offset_top = 564.0
+offset_right = 391.0
+offset_bottom = 645.0
+scale = Vector2(1, 1.003)
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+icon = ExtResource("8_txj8d")
+expand_icon = true
+
+[node name="welcomeBox" type="ColorRect" parent="ButtonsSide"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -462.0
+offset_right = 351.0
+offset_bottom = 97.0
+grow_horizontal = 0
+scale = Vector2(0.570916, 0.713542)
+color = Color(0, 0, 0, 0.509804)
+
+[node name="logoutButton" type="Button" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 16.0
+offset_right = 451.0
+offset_bottom = 55.0
+scale = Vector2(1, 0.997794)
+theme = ExtResource("5_mogi5")
+text = "LOGOUT"
+
+[node name="welcome" type="Label" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 23.0
+offset_right = 148.0
+offset_bottom = 56.0
+text = "Welcome,"
+
+[node name="playerName" type="Button" parent="ButtonsSide"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 23.0
+offset_right = 305.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.894118, 0.717647, 0.0823529, 1)
+text = "[player_name]"
+
+[node name="quitPrompt" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.705882)
+
+[node name="simpleBox" type="TextureRect" parent="quitPrompt"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -165.0
+offset_right = 1070.0
+offset_bottom = 658.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.472281, 0.424666)
+texture = ExtResource("10_hb0yg")
+
+[node name="promptLabel" type="Label" parent="quitPrompt/simpleBox"]
+layout_mode = 0
+offset_left = 347.251
+offset_top = 167.19
+offset_right = 1089.25
+offset_bottom = 257.19
+theme_override_font_sizes/font_size = 50
+text = "Are you sure you want to quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yesButton" type="Button" parent="quitPrompt/simpleBox"]
+layout_mode = 0
+offset_left = 190.564
+offset_top = 449.765
+offset_right = 569.564
+offset_bottom = 579.765
+theme = ExtResource("5_mogi5")
+theme_override_font_sizes/font_size = 60
+text = "YES"
+
+[node name="noButton" type="Button" parent="quitPrompt/simpleBox"]
+layout_mode = 0
+offset_left = 836.366
+offset_top = 449.765
+offset_right = 1215.37
+offset_bottom = 579.765
+theme = ExtResource("5_mogi5")
+theme_override_font_sizes/font_size = 60
+text = "NO"
+
+[connection signal="pressed" from="ButtonsSide/playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/optionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ButtonsSide/logoutButton" to="." method="_on_logout_button_pressed"]
+[connection signal="pressed" from="quitPrompt/simpleBox/yesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="quitPrompt/simpleBox/noButton" to="." method="_on_no_button_pressed"]

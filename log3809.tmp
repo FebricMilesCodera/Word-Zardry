@@ -1,0 +1,251 @@
+[gd_scene load_steps=14 format=3 uid="uid://t4284jf86cw8"]
+
+[ext_resource type="Script" path="res://gd/log_in.gd" id="1_g5l63"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_trgcy"]
+[ext_resource type="Texture2D" uid="uid://dm408m4hnats4" path="res://images and assets/Main_Frame.png" id="4_fqy7e"]
+[ext_resource type="Texture2D" uid="uid://ct7bs1dvc7o00" path="res://images and assets/Title Frame.png" id="4_spbdy"]
+[ext_resource type="Texture2D" uid="uid://c0ga85j05yb4h" path="res://images and assets/logo3.png" id="5_loije"]
+[ext_resource type="Theme" uid="uid://fvbxhiulsn7c" path="res://materials/wordzardryTheme5.tres" id="6_o0kpi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usvuk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylol2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqv4r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0x8br"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dn4qd"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_g27t0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ff1a5"]
+texture = SubResource("MeshTexture_g27t0")
+
+[node name="LogIn" type="Control"]
+layout_mode = 3
+anchor_right = 1.001
+anchor_bottom = 1.0
+offset_right = -0.1521
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g5l63")
+
+[node name="TempBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 8895.23
+offset_bottom = 3890.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.177538, 0.217)
+size_flags_horizontal = 0
+texture = ExtResource("2_trgcy")
+
+[node name="MainFrame" type="Sprite2D" parent="."]
+position = Vector2(961, 528.5)
+scale = Vector2(1.09438, 1.31225)
+texture = ExtResource("4_fqy7e")
+
+[node name="TitleFrame" type="Sprite2D" parent="MainFrame"]
+position = Vector2(-1.22477, -170.65)
+scale = Vector2(1.00996, 1.16948)
+texture = ExtResource("4_spbdy")
+
+[node name="Logo" type="TextureRect" parent="MainFrame"]
+anchors_preset = -1
+anchor_left = -0.387
+anchor_right = 1.413
+anchor_bottom = 1.0
+offset_left = 258.031
+offset_top = -385.216
+offset_right = 260.631
+offset_bottom = 233.784
+scale = Vector2(0.122, 0.1125)
+size_flags_horizontal = 8
+texture = ExtResource("5_loije")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1739.0
+offset_top = 14.0
+offset_right = 1908.0
+offset_bottom = 85.0
+theme_override_constants/separation = 30
+
+[node name="Back To Main Menu" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("6_o0kpi")
+text = "Quit "
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.35
+anchor_right = 0.743
+anchor_bottom = 0.937
+offset_left = -0.207336
+offset_top = 0.349976
+offset_right = -0.873657
+offset_bottom = -0.0230103
+
+[node name="Signup" type="Panel" parent="TabContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_usvuk")
+
+[node name="username" type="LineEdit" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 129.0
+offset_right = 596.0
+offset_bottom = 160.0
+placeholder_text = "Username"
+
+[node name="email" type="LineEdit" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 161.703
+offset_right = 596.0
+offset_bottom = 192.703
+placeholder_text = "Email"
+
+[node name="password" type="LineEdit" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 195.746
+offset_right = 596.0
+offset_bottom = 226.746
+placeholder_text = "Password"
+secret = true
+
+[node name="passwordc" type="LineEdit" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 232.298
+offset_right = 596.0
+offset_bottom = 263.298
+placeholder_text = "Confirm Password"
+secret = true
+
+[node name="Button" type="Button" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 267.881
+offset_right = 436.0
+offset_bottom = 298.881
+text = "Sign Up"
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 470.623
+offset_top = 267.881
+offset_right = 612.623
+offset_bottom = 298.881
+text = "Remember Me"
+
+[node name="Label" type="Label" parent="TabContainer/Signup"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 330.0
+offset_right = 594.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "An error has occoured"
+
+[node name="Login" type="Panel" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ylol2")
+
+[node name="username" type="LineEdit" parent="TabContainer/Login"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 150.0
+offset_right = 593.0
+offset_bottom = 181.0
+placeholder_text = "Username"
+
+[node name="password" type="LineEdit" parent="TabContainer/Login"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 183.703
+offset_right = 593.0
+offset_bottom = 214.703
+placeholder_text = "Password"
+secret = true
+
+[node name="Button" type="Button" parent="TabContainer/Login"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 219.746
+offset_right = 423.0
+offset_bottom = 250.746
+text = "Log In"
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Login"]
+layout_mode = 0
+offset_left = 469.623
+offset_top = 219.746
+offset_right = 611.623
+offset_bottom = 250.746
+text = "Remember Me"
+
+[node name="Label" type="Label" parent="TabContainer/Login"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 362.0
+offset_right = 593.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "An error has occoured"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Don\'t have an account?" type="TextEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 509.0
+offset_top = 950.0
+offset_right = 782.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uqv4r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0x8br")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_dn4qd")
+text = "Don't have an account?"
+
+[node name="ForgotPasswordButton" type="TextEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1231.0
+offset_top = 959.0
+offset_right = 1406.0
+offset_bottom = 994.0
+theme_override_colors/font_color = Color(0.764706, 0.658824, 0.294118, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uqv4r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0x8br")
+text = "Forgot Password?"
+
+[node name="SignUpButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 795.0
+offset_top = 949.0
+offset_right = 897.0
+offset_bottom = 991.0
+theme_override_colors/font_color = Color(0.788905, 0.588232, 0.0766475, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ff1a5")
+text = "Sign Up!"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="VBoxContainer2/Back To Main Menu" to="." method="exit_game"]

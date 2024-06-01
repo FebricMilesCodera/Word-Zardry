@@ -1,0 +1,1183 @@
+[gd_scene load_steps=11 format=3 uid="uid://bpa3xh2umeu2t"]
+
+[ext_resource type="Script" path="res://Question List (Personality).gd" id="1_3yv1e"]
+[ext_resource type="Texture2D" uid="uid://dr36u3f75w23x" path="res://images and assets/word_bg-1.png" id="2_fdxrh"]
+[ext_resource type="Texture2D" uid="uid://cwnp6qumls3jw" path="res://images and assets/simpleBox.png" id="3_k1dem"]
+[ext_resource type="Theme" uid="uid://bjj27hnebf7xb" path="res://materials/wordzardryTheme.tres" id="4_0ijce"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cx7cg"]
+bg_color = Color(0, 0.341176, 0.439216, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.47451, 0.603922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcuw8"]
+bg_color = Color(0.156863, 0.478431, 0.580392, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.423529, 0.556863, 0.682353, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f7te"]
+bg_color = Color(0.113725, 0.380392, 0.462745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.423529, 0.556863, 0.682353, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmcub"]
+bg_color = Color(0.054902, 0.223529, 0.278431, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.423529, 0.556863, 0.682353, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enrbp"]
+bg_color = Color(0.894118, 0.717647, 0.0823529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3oc5y"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[node name="Question List (Personality)" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3yv1e")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fdxrh")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -771.0
+offset_top = -489.0
+offset_right = 778.0
+offset_bottom = 495.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SimpleBox" type="Sprite2D" parent="CenterContainer"]
+position = Vector2(804, 529)
+scale = Vector2(0.787314, 1.09455)
+texture = ExtResource("3_k1dem")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/SimpleBox"]
+anchors_preset = -1
+anchor_left = 0.039
+anchor_top = 0.048
+anchor_right = 0.968
+anchor_bottom = 0.963
+offset_left = -703.873
+offset_top = -411.504
+offset_right = -702.976
+offset_bottom = -411.549
+
+[node name="questionLists" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="question1" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 1"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit1" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit1" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit1" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit1" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit1" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question1/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question2" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 2"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit2" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit2" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit2" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit2" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit2" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question2/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question3" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 3"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit3" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit3" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit3" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit3" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit3" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question3/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question4" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 4"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit4" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit4" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit4" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit4" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit4" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question4/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question5" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 5"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit5" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit5" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit5" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit5" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit5" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question5/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question6" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 6"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit6" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit6" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit6" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit6" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit6" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question6/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question7" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 7"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit7" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit7" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit7" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit7" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit7" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question7/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question8" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 8"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit8" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit8" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit8" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit8" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit8" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question8/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question9" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 9"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit9" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit9" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit9" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit9" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit9" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question9/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="question10" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx7cg")
+
+[node name="mainContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.024
+anchor_right = 0.985
+anchor_bottom = 0.979
+offset_left = 1.12
+offset_top = 0.04
+offset_right = -0.180054
+offset_bottom = -0.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="questionContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="questionMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionLabel" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/questionContainer/questionMargin"]
+custom_minimum_size = Vector2(199.47, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "QUESTION 10"
+
+[node name="questionTextMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/questionContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="questionTextEdit10" type="TextEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/questionContainer/questionTextMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here"
+wrap_mode = 1
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer"]
+layout_mode = 2
+
+[node name="choiceMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer/choiceMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CHOICES"
+
+[node name="choicesMargin" type="MarginContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="choicesContainer" type="VBoxContainer" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer/choicesMargin"]
+layout_mode = 2
+
+[node name="answer1LineEdit10" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Warrior"
+
+[node name="answer2LineEdit10" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Hunter"
+
+[node name="answer3LineEdit10" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Mage"
+
+[node name="answer4LineEdit10" type="LineEdit" parent="CenterContainer/SimpleBox/ScrollContainer/questionLists/question10/Panel/mainContainer/choicesContainer/choicesMargin/choicesContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Priest"
+
+[node name="updateButton" type="Button" parent="CenterContainer/SimpleBox"]
+custom_minimum_size = Vector2(100, 60)
+offset_left = 739.978
+offset_top = -336.762
+offset_right = 889.978
+offset_bottom = -236.762
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcuw8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3f7te")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mmcub")
+text = "✓"
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer"]
+layout_mode = 2
+color = Color(0.894118, 0.717647, 0.0823529, 1)
+
+[node name="titleLabel" type="Label" parent="CenterContainer/ColorRect"]
+layout_mode = 0
+offset_left = -170.0
+offset_top = -490.0
+offset_right = 239.0
+offset_bottom = -401.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_enrbp")
+text = "PERSONALITY QUIZ (QUESTION LIST)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="savingLabel" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3oc5y")
+text = "Saving questions..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 37.0
+offset_right = 142.0
+offset_bottom = 74.0
+scale = Vector2(1, 0.997794)
+theme = ExtResource("4_0ijce")
+text = "BACK"
+
+[connection signal="pressed" from="CenterContainer/SimpleBox/updateButton" to="." method="_on_update_button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
