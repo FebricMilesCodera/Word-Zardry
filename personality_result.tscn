@@ -119,9 +119,9 @@ text = "CONFIRM"
 
 [node name="backButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 54.0
+offset_left = 48.0
 offset_top = 37.0
-offset_right = 149.0
+offset_right = 143.0
 offset_bottom = 79.0
 scale = Vector2(1, 0.997794)
 theme = ExtResource("8_x02m0")
